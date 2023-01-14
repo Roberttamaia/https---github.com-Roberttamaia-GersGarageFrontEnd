@@ -65,6 +65,7 @@ export class AppService {
       })
       .catch((error) => {
         window.alert(error.message);
+        
       });
   }
 
