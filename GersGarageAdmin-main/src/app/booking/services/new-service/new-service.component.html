@@ -1,0 +1,13 @@
+<div class="user">
+    <form [formGroup]="addServiceFormGroup" (ngSubmit)="saveService()">
+        <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="serviceName" placeholder="Service Name"/>
+            <mat-hint>Service Name</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="weight" placeholder="Service Weight"/>
+            <mat-hint>Weight</mat-hint>
+        </mat-form-field>
+        <button class="btn btn-primary" value="submit">Submit</button>
+    </form>
+</div>

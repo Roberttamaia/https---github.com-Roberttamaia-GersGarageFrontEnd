@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <h1 class="text-left">All vehicle Types</h1>
+        <button class="btn btn-primary" routerLink="form">New vehicle Type</button>
+      </div>
+      <hr />
+      <table class="table table-striped">
+        <thead class="bg-light">
+          <tr>
+            <th>Make</th>
+            <th> Model</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehicleType of vehicleTypes" class="data">
+            <td>
+              <div class="ms-3">
+                <p class="">{{ vehicleType.make }}</p>
+              </div>
+            </td>
+
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ vehicleType.model }}</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

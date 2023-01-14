@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <h1 class="text-left" (click)="openPDF()">All Invoices</h1>
+        <button class="btn btn-primary" (click)="openDialog()">New  Invoice</button>
+        <button class="btn btn-primary" (click)="openPDF()">Download Invoice</button>
+      </div>
+      <hr />
+      <table class="table table-striped" id="htmlData">
+        <thead class="bg-light">
+          <tr>
+            <th>Booking</th>
+            <th> Total Ammount</th>
+            <th> Paid Ammount</th>
+            <th> Parts</th>
+
+          
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let invoice of invoices" class="data">
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ invoice.bookings.services.serviceName }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="">{{ invoice.totalAmount }}</p>
+              </div>
+            </td>
+
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ invoice.paidAmount }}</p>
+              </div>
+            </td>
+           
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ invoice.bookings.vehicleParts }}</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

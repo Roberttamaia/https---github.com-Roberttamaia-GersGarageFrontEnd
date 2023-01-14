@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          <h1 class="text-left">All Users</h1>
+          <button class="btn btn-primary" (click)="openDialog()">New  User</button>
+        </div>
+        <hr />
+        <table class="table table-striped">
+          <thead class="bg-light">
+            <tr>
+              <th>Username</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Role</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users" class="data">
+              <td>
+                <div class="ms-3">
+                  <p class="">{{ user.name }}</p>
+                </div>
+              </td>
+  
+              <td>
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ user.firstName }}</p>
+                </div>
+              </td>
+              <td>
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ user.lastName }}</p>
+                </div>
+              </td>
+              <td>
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ user.email }}</p>
+                </div>
+              </td>
+              <td>
+                <div class="ms-3">
+                  <p class="fw-bold mb-1">{{ user.role }}</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

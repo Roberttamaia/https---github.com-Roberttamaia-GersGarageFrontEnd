@@ -1,0 +1,141 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    *ngIf="sideNav.mode === 'over'"
+    (click)="sideNav.toggle()"
+  >
+    <mat-icon *ngIf="!sideNav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sideNav.opened"> close </mat-icon>
+  </button>
+  <div class="logo">
+    <a a routerLink="/dashboard" class="simple-text logo-mini">
+      <div class="logo-img">
+        <img src="../../../assets/images/alladinlogo.jpeg" alt="" />
+      </div>
+    </a>
+    <a class="simple-text logo-normal">Gers Garage Admin </a>
+  </div>
+  <div class="navigation">
+    <div>
+      <mat-label>
+        <img
+          class="avatar mat-elevation-z8"
+          src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+        />
+      </mat-label>
+    </div>
+    <div>
+      <li class="name">
+        {{ displayName }}
+      </li>
+      <li class="email mb-1">{{ email }}</li>
+    </div>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav opened #sideNav="matSidenav" class="mat-elevation-z8">
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/dashboard"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-home"></i>
+      <span>Dashboard</span>
+    </button>
+
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/users/users-list"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-address-book"></i>
+      <span>Users</span>
+    </button>
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/booking/services"
+      routerLinkActive="active"
+    >
+      <i class="fa-brands fa-product-hunt"></i>
+      <span>Services</span>
+    </button>
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/booking/bookings"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-layer-group"></i>
+      <span>Bookings</span>
+    </button>
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/booking/invoices"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-lock"></i>
+      <span>Invoices</span>
+    </button>
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/vehicle/vehicle-list"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-sack-dollar"></i>
+      <span>Vehicles</span>
+    </button>
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/vehicle/vehicle-types"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Vehicle Types</span>
+    </button>
+    <button
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/vehicle/vehicle-parts"
+      routerLinkActive="active"
+    >
+      <i class="fa-solid fa-receipt"></i>
+      <span>Parts</span>
+    </button>
+
+    <button
+      (click)="logoutUser()"
+      mat-button
+      class="menu-button"
+      a
+      routerLink="/"
+      routerLinkActive=""
+    >
+      <i class="fa fa-sign-out"></i>
+      <span>Logout </span>
+    </button>
+
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button">
+      <mat-icon>help</mat-icon>
+      <span>Help</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

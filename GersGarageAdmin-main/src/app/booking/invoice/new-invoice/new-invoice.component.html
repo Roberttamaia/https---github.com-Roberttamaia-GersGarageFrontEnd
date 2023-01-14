@@ -1,0 +1,13 @@
+<div class="user">
+    <form [formGroup]="addInvoicesFormGroup" (ngSubmit)="saveInvoice()">
+        <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="totalAmount" placeholder="Total Ammount" />
+            <mat-hint>Total Ammount</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput type="text" formControlName="paidAmount" placeholder="Paid Ammount" />
+            <mat-hint>Paid Ammount</mat-hint>
+        </mat-form-field>
+        <button class="btn btn-primary" value="submit">Submit</button>
+    </form>
+</div>

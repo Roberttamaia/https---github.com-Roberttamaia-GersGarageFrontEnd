@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <h1 class="text-left">All Bookings</h1>
+
+      </div>
+      <hr />
+      <table class="table table-striped">
+        <thead class="bg-light">
+          <tr>
+            <th>FirstName</th>
+            <th> Last Name</th>
+            <th> Contact</th>
+            <th> Vehicle Type</th>
+            <th> Vehicle Make</th>
+            <th> Engine</th>
+            <th> License</th>
+            <th> Description</th>
+            <th> Date</th>
+
+
+          
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings" class="data">
+            <td>
+              <div class="ms-3">
+                <p class="">{{ booking.firstName}}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="">{{ booking.lastName}}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="">{{ booking.contact}}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ booking.vehicleType }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ booking.vehicleMake }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ booking.engine }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ booking.license }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ booking.description }}</p>
+              </div>
+            </td>
+            <td>
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{ booking.date}}</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
